@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        {% block script %}{% endblock %}
+
+    </head>
+    <body>
+
+        <div class="mob-container">
+            <div class="navbar">
+                <div class="dummy">
+                    dummy
+                </div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar_links">
+                    <ul class="menu">
+                        <li><a href="{% url 'home' %}">Home</a> </li>
+                        <li><a href="{% url 'about' %}">About</a> </li>
+                        <li><a href="{% url 'org' %}">Original Artwork</a> </li>
+                        <li><a href="{% url 'about' %}#anchor">Contact us</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <script src="{% static 'j.js' %}" defer></script>
+
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

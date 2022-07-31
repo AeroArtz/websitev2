@@ -1,0 +1,40 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="org-section">
+
+
+        <h1 class="title"> ORIGINAL ARTWORK </h1>
+        <h2 id="notice"> notice : online webstore coming soon!</h2>
+        <div class="org-container">
+            {% for result in Artwork %}
+                <div class="column">
+                    {% if not result.Available %}
+                        <div class="sold">
+                            <p>sold</p>
+                        </div>
+                    {% endif %}
+                    <img src="{{result.img.url}}" >
+                    <div class="desc">
+                        {{result.Painting_Title}}
+                    </div>
+                    <div class="secondary-desc">
+                        <p> Acrylic Landscape Painting</p>
+                    </div>
+                    <div id="psize">
+                        <p>{{result.size}}</p>
+                    </div>
+                    <div id="pprice">
+                        <p>{{result.price}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="painting-title">
+        <h1>'The Hidden Valley' - Acrylic Landscape painting</h1>
+    </div>
+    <div class="painting-container">
+        <img id="image" src="{% static "paintings/barn.JPG" %}">
+
+    </div>
+    <div class="painting-info">
+        <p id="p-size">
+           Size: 20x21 inches
+        </p>
+        <p id="framed">
+            Framed : No
+        </p>
+    </div>
+{% endblock content %}

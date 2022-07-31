@@ -1,0 +1,46 @@
+{% extends "home/base.html"%}
+{% load static %}
+{% block script %}
+    <script src="https://kit.fontawesome.com/d0a6b6f20a.js" crossorigin="anonymous"></script>
+{% endblock script %}
+{% block content%}
+
+    <div class="about-section">
+        <div class="top_part">
+            <h1 class="title">
+                ABOUT
+            </h1>
+            <img id="selfpic" src="{% static "selfpic.JPG" %}">
+            <p class="about-content">
+            Hey there! Im Abdul Rehman a.k.a AeroArtz, an amateur
+            artist based in Dubai. My forte is landscape art and still life. To me painting is more than just a hobby,
+            it's a way of expressing my passion and capture the beauty of outdoors onto the canvas.
+            I grew up watching artists on youtube and was raised in an environment amidst artists who were my family and acquaintances,
+                which ultimately got me hooked and led
+                me on my journey to pursue art.</p>
+        </div>
+
+
+        <div class="title-container2">
+            <div class="overlay">
+
+            </div>
+            <div class="line"></div>
+
+            <h1 class="contact-title" id="anchor">
+                Contact us
+            </h1>
+            <p id="contact-info"> For any inquiries please contact me at
+                trickyacids1441@gmail.com or dm me on social media</p>
+
+            <div class="wrapper">
+                <a href="https://www.instagram.com/aero.artz/" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/TrickyAcids1441" class="icon"><i class="fab fa-twitter"></i></i></a>
+                <a href="https://www.youtube.com/channel/UC6fRJtQpvmg3fu6qXIxnKeA" class="icon"><i class="fab fa-youtube"></i></i></a>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock content%}
