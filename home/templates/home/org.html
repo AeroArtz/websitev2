@@ -8,7 +8,7 @@
         <h1 class="title"> ORIGINAL ARTWORK </h1>
         <h2 id="notice"> notice : online webstore coming soon!</h2>
         <div class="org-container">
-            {% for result in Artwork %}
+            {% for result in objs %}
                 <div class="column">
                     {% if not result.Available %}
                         <div class="sold">
@@ -16,7 +16,7 @@
                         </div>
                     {% endif %}
 
-                    <img src='{{result.img.url}}'>
+                    <img src='{% static result.img %}'>
                     <div class="desc">
                         {{result.Painting_Title}}
                     </div>
